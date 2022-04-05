@@ -13,7 +13,7 @@ router.post('/', function (req, res, next) {
     to: "cass@cassm.net",
     subject: 'Contact form submission from cassm.net',
     text: submission.message
-  }).then(info => console.log(info));
+  });
 
   if (submission.sendcopy) {
     transporter.sendMail({
@@ -29,7 +29,7 @@ router.post('/', function (req, res, next) {
       ------------------------------------------------
 
       ${submission.message}`
-    }).then(info => console.log(info));
+    });
   }
 });
 
