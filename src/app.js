@@ -6,7 +6,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const formDataRouter = require('./routes/formdata');
+const formDataRouter = require('../routes/formdata');
 
 const app = express();
 
