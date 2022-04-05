@@ -15,12 +15,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(express.static(path.join(__dirname, '../../', 'cassm.net-client', 'build')));
+app.use(express.static(path.join(__dirname, '../', 'client', 'build')));
 app.use('/formdata', formDataRouter);
 
 // pass everything that isn't a static file request or an api request to react for routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../', 'cassm.net-client', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../', 'client', 'build', 'index.html'));
 })
 
 module.exports = app;
